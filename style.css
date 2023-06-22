@@ -1,0 +1,96 @@
+@font-face {
+    font-family:spaceG;
+    src: url(assets/SpaceGrotesk-VariableFont_wght.ttf);
+}
+*{ transition: .3s;padding: 0;margin: 0;box-sizing: border-box;font-family: spaceG;white-space: nowrap;font-size: 18px;}
+
+header{
+    position: relative;
+    height: 300px;width: 100%;
+
+}
+header img{height: 100%;width: 100%;}
+
+/* #  Cards  */
+
+.back-card{position: absolute;top: 3rem;width: clamp(300px,45vw,400px);right: 1rem;}
+.back-card p{position: absolute;top: 50%;right:3rem;transform: translate(-50%,-50%);color: white;}
+.back-card img{width: 100%;}
+
+.front-card{position: absolute;top: 20%;width: clamp(300px,45vw,400px);left: clamp(16px,5vw,600px);}
+#card-front{width: 100%;}
+#card-logo{position: absolute;top: 1rem;left:1rem;width: 63px;height: 35px;} 
+.front-card h1{
+    position: absolute;
+    top: 50%;left:50%;transform: translate(-50%,-50%);
+    color: white;white-space: nowrap;
+    font-size:20px;font-weight: 400;letter-spacing: 2px;
+}
+.front-card-content div{
+    padding:0 1rem ;
+    display: flex;justify-content: space-between;
+    width: 100%;
+    color: white;
+    white-space: nowrap;
+    position: absolute;bottom: 2rem;
+    font-weight: 400;letter-spacing: 2px;
+}
+.front-card-content p{font-size: 14px;}
+@media (min-width:768px) {
+    .back-card{top: 1rem;right: 30%;}
+    .front-card{left: 40%;}
+}
+
+
+/* # Main Contact Form */
+
+main{width: 90%;margin: 5rem auto;}
+form,form div{display: flex;flex-direction: column; gap: .5rem;}
+form{gap: 1rem;}
+form input{
+    padding: .5rem 1rem;width: 100%;
+    outline: none;border: 1px solid hsl(270, 3%, 87%);
+    border-radius: 10px;
+}
+form input::placeholder{color:hsl(270, 3%, 87%);font-weight:900 ;}
+form input:focus{outline:1px solid hsl(278, 94%, 30%);}
+form label{font-weight: 500;text-transform: uppercase;width: 100%;}
+button{cursor: pointer;border: none;padding:1rem 0;border-radius: 10px;background-color:  hsl(278, 68%, 11%);color: white;}
+button:hover{box-shadow: 0 0 15px hsl(279, 6%, 55%);}
+
+/* # Main Succed MSG */
+
+.succed{
+    display: flex;flex-direction: column;align-items: center;
+    justify-content: center; gap: .5rem;
+    display: none;
+}
+.succed p{color: hsl(279, 6%, 55%);}
+.succed h1 {color: hsl(278, 68%, 11%);font-size: 40px;}
+
+.succed button{width: 100%;margin-top: 2rem;}
+
+/* # Errors */
+
+#error{color: hsl(0, 100%, 66%);display: none;}
+
+
+
+
+
+/* ! Responsive god Demn it */
+
+#bg-desktop{display: none;}
+
+@media (min-width:1440px) {
+     header{height: 100vh;width:clamp(600px,36.5vw,700px);}
+     #bg-desktop{display: block;}
+     #bg-mobile{display: none;}
+     .back-card{top: 50%;left: clamp(400px,27vw,500px);}
+     .front-card{top: 15%;left: clamp(200px,21vw,400px);}
+     body{display: flex;align-items: center;}
+     main{width: 25%;}
+     form{gap: 2rem;}
+     form input{font-weight: 700;padding: 1rem;font-size: 20px;}
+}
+

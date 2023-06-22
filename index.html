@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Card</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/favicon-32x32.png">
+</head>
+<body>
+
+    <header>
+        <img id="bg-mobile" src="assets/bg-main-mobile.png" alt="bg-main-mobile">
+        <img id="bg-desktop" src="assets/bg-main-desktop.png" alt="bg-main-desktop">
+       <div class="back-card">
+           <img src="assets/bg-card-back.png" alt="bg-card-back">
+           <p></p>
+       </div>
+    </header>
+
+     <div class="front-card">
+        <img id="card-logo" src="assets/card-logo.svg" alt="card-logo">
+        <img id="card-front" src="assets/bg-card-front.png" alt="bg-card-front">
+        
+        <div class="front-card-content">
+            <h1></h1>
+            <div>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <form>
+            <div>
+                <label>Cardholder Name</label>
+                <input type="text" placeholder="e.g. Jane Appleseed">
+                <span id="error">Wrong format, characters only</span>
+            </div>
+            <div>
+                <label>Card Number</label>
+                <input type="text" placeholder="e.g. 1234 5678 9123 0000" maxlength="16">
+                <span id="error">Wrong format, numbers only</span>
+
+            </div>
+            <div style="flex-direction: row;">
+                <div>
+                    <label>Exp. Date (MM/YY)</label>
+                    <div style="flex-direction: row;">
+                        <input type="text" placeholder="MM" maxlength="2"><input type="text" placeholder="YY" maxlength="2">
+                    </div>
+                    <span id="error" style="text-align: center;">Can't be blank</span>
+                </div>
+                <div>
+                    <label>CVC</label><input type="text" placeholder="e.g. 123" maxlength="3">
+                    <span id="error">Can't be blank</span>
+                </div>
+            </div>   
+
+            <button>Confirm</button>
+        </form>
+
+        <div class="succed">
+                <img src="assets/icon-complete.svg" alt="icon-complete">
+                <h1>Thank you!</h1>
+                <p>We've added your card details</p>
+                <button id="Continue">Continue</button>
+        </div>
+    </main> 
+
+
+
+
+<script src="main.js"></script>
+
+</body>
+</html>
